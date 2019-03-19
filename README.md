@@ -67,6 +67,6 @@ The real-coded Archived Multi Objective Simulated Annealing (AMOSA) is introduce
     Paper Title: A Simulated Annealing Based Multi-objective Optimization Algorithm: AMOSA
     Journal: IEEE Transaction on Evolutionary Computation, Volume 12, No. 3, JUNE 2008, Pages 269-283.
 
-The original code is available for the download from Sriparna Saha's website at: http://www.isical.ac.in/~sriparna_r
+
 
 # How to Compile and Run
