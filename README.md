@@ -39,6 +39,10 @@ Output : Gives four membership matrices (which are clustering matrices for each 
 #Membership3.txt
 #Membership4.txt
 
+
+
+
+
 FILE NAME : consensus_membership.py
 #run the code as : python3 consensus_membership.py
 Input : resultFile_journal_clusi_multiview (here i=0 to i=n)
@@ -64,6 +68,10 @@ It requires the following matrices as input :
 #membership_consensusi.txt (here i=0 to i=n)   
 
 #Output : resultdebo1.txt
+
+
+
+
 
 FILE NAME : resplot.py
 #run the code as : python3 resplot.py
