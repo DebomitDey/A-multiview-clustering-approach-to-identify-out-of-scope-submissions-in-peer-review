@@ -25,13 +25,14 @@ Along with the distance matrices this code also stores feature matrices for futu
 # 2. Multiview Clustering
 FILE NAME : amosa_mores_copy.cpp 
 Here the clustering part is done on the distance matrices.
+Inside training dataset there may be some clusters. A data is said to be out of scope if it does not lie in vicinity of any of the clusters formed by the training data.
 
 #compile the code as : g++ amosa_mores_copy.cpp -o amosa_mores_copy
 #run the code as : ./amosa_mores_copy Dist_tfidf.txt Dist_venue.txt Dist_title.txt Dist_semantic resultFile (size of training datset)
 
 Here size of training dataset refers to the no of documents used for training.(Check it from the distance matrix)  
 
-Output : Gives four membership matrices (which are clustering matrices for each view)  and  consensus partitionings :
+Output : Gives four membership matrices (which are clustering matrices for each view)  and  consensus partitionings (there may be several consensus partitionings) :
 
 #resultFile_journal_clusi_multiview (here i=1 to i=n . Here n will vary depending on how many consensus partitionings are created)
 #Membership1.txt
@@ -41,7 +42,7 @@ Output : Gives four membership matrices (which are clustering matrices for each 
 
 
 
-
+Here we will take the consensus partitions of the train data. And here we shall create a membership matrix depicting a data belongs to which cluster corresponding to each consensus partition.
 
 FILE NAME : consensus_membership.py
 #run the code as : python3 consensus_membership.py
@@ -53,7 +54,7 @@ Output : membership_consensusi.txt (here i=0 to i=n)
 FILE NAME : Bscope.py
 #run the code as : python3 Bscope.py
 
-It checks whether the test instance is incope or out of scope. and gives the precision recall scores.
+For each test data it calculates the minimum distance from a partition in terms of tfidf distance,semantic distance and venue distance and we will use these three distances as the new feature of the test data.  
 
 It requires the following matrices as input :
 
@@ -65,13 +66,13 @@ It requires the following matrices as input :
 #Dist_tfidf.txt
 #Dist_title.txt
 #Dist_semantic.txt
-#membership_consensusi.txt (here i=0 to i=n)   
+#membership_consensus1.txt (here we take only one consensus partition of the training data to determine the scope of the test data)
 
 #Output : resultdebo1.txt
 
 
 
-
+Then with the help of new features we apply k-medoid algorithm to classify the inscope and outscope data.
 
 FILE NAME : resplot.py
 #run the code as : python3 resplot.py
