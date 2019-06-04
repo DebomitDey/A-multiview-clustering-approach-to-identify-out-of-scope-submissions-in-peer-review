@@ -1027,7 +1027,7 @@ for i in range(len(c1)):
 #df1=pd.DataFrame(c1,columns=["semantic","tfidf"])
 #plt.plot(c1[0],c1[1],"bo")
 #plt.show()
-print("enter")
+print("enter eps value for DBSCAN")
 ep=input()
 km=DBSCAN(eps=float(ep)).fit(d)
 print(km.labels_)
@@ -1042,9 +1042,13 @@ ax.scatter(a1,b1,e1,c='b',marker='o')
 
 
 print("####################################################")
+print("number of inscope data");
 print(len(c))
+print("number of outscope data");
 print(len(c1))
 print("####################################################")
+
+print("this results are when we consider inscope data as positive");
 tp=0.0
 tn=0.0
 
@@ -1098,6 +1102,7 @@ print(fp)
 
 
 print("#######################################################################")
+print("this results are when we consider outscope data as positive");
 tp=0.0
 tn=0.0
 for i in range(len(c)):
