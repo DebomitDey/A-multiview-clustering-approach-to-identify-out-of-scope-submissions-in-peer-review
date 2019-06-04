@@ -6,8 +6,8 @@ FILE NAME: b2MVMOO_2.py
 #run the code as : python3 b2MVMOO_2.py
 1) Views generation : We generate four views , 1 lexical(TF-IDF matrix),2  Bibliographic(title and venue) and 1 semantic .On the basis of 4 views 4 corresponding distance matrices are generated.
 #One need to change the "base2" value to where the trainig data is there.
-#"base3" value needs to be set to the directory where test "inscope" data is there.
-#"base4" value needs to be set to the directory where test "outscope" data is there.
+#"base3" value needs to be set to the directory where test "inscope" data is present.
+#"base4" value needs to be set to the directory where test "outscope" data is present.
 
 We get the corresponding views names as:
 
