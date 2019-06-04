@@ -77,7 +77,7 @@ Then with the help of new features we apply k-medoid algorithm to classify the i
 FILE NAME : resplot.py
 #run the code as : python3 resplot.py
 here inside the resplot.py put the consensus semantic distances, consensus tfidf distances, consensus venue distances from resultdebo1.txt in  a,b,e list(for inscope data) and a1,b1.e1 list(for outscope data) respectively
-Output :  Gives 0 or 1 for each test data where 0 means inscope and 1 means outscpe data
+Output :  Gives 0 or 1 for each test data where 0 means inscope and 1 means outscpe data and the accuracy,precision,recall and f1 scores.
 
 
 
